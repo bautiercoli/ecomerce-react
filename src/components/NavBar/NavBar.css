@@ -1,13 +1,14 @@
 .NavBar{
-    background-color: #3369B0;
-    text-align: center;
-    height: 80px;
+    background-color:#3369B0;
+    display: grid;
+    grid-template-columns: 40% 50% 10%;
+    align-items: center;
+    height: 100%;
 }
 
-.NavBarButton{
+.NavBarbutton{
     background-color: #3369B0;
     border-color: #3369B0;
-    color: black;
     margin-left: 6px;
     margin-right: 6px;
     margin-top: 7px;
@@ -15,6 +16,14 @@
     padding-right: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.NavBarmenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .titulo{
     font-size: x-large;
