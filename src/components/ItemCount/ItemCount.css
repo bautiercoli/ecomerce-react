@@ -1,0 +1,17 @@
+.restar{
+    background-color: #3595FF;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sumar{
+    background-color: #3595FF;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+}
