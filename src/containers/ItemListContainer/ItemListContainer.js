@@ -1,6 +1,6 @@
-import React from 'react'
+import ItemCount from '../../components/ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
 
 const ItemListContainer = ({destacados, productos, oferta}) => {
 
@@ -13,6 +13,7 @@ const ItemListContainer = ({destacados, productos, oferta}) => {
             <h2>{ productos }</h2>
             <ItemCount stock={7} initial={1} onAdd={onAdd} />
             <h2>{ oferta }</h2>
+            <ItemList></ItemList>
         </div>
     )
 }
