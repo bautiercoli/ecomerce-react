@@ -28,6 +28,6 @@ function ItemCount({ stock, initial, onAdd}) {
     </div>
     
 )
-}
+} 
 
 export default ItemCount

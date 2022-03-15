@@ -3,7 +3,7 @@ import './Item.css';
 
 function Item({ items }) {
     return (
-        <div key={ items.id } className="cards">
+        <div className="cards">
             <div className="cards__header">
                 <img src={ items.img } alt='' className="cards__image"></img>
             </div>

@@ -25,7 +25,7 @@ useEffect(() => {
                     {   loading ? <h1 className="loading">Cargando...</h1>
                                 :
                                 combos.map((prod) => 
-                                <Item items={ prod }  />
+                                <Item key={ prod.id } items={ prod }  />
                                 )
                             }
                 </>
