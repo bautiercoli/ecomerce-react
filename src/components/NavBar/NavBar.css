@@ -6,11 +6,11 @@
     height: 100%;
 }
 
-.NavBarbutton{
+.NavBar__button{
     background-color: #3369B0;
-    border-color: #3369B0;
-    margin-left: 6px;
-    margin-right: 6px;
+    border-color: #215ca8;
+    margin-left: 16px;
+    margin-right: 16px;
     margin-top: 7px;
     padding-left: 10px;
     padding-right: 10px;
