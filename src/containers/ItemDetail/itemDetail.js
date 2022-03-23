@@ -1,6 +1,8 @@
 import './ItemDetail.css';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import { useState } from 'react'
+import { useCartContext } from '../../context/cartContext';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ prod }) => {
 
@@ -13,10 +15,12 @@ const ItemDetail = ({ prod }) => {
     const restar = ()=> {
         setCount(count-1)
     }
-    const onAdd = (cantidad)=>{
+    const { addItem, cartList } = useCartContext()
+
+    const onAdd = count =>{
         console.log(`Agregaste ${count} productos`)
     }
-
+    console.log(cartList)
     return (
         <div className='detalle'>
             <div>
@@ -30,8 +34,11 @@ const ItemDetail = ({ prod }) => {
                 </div>
                 <div>
                 <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} onAdd={onAdd}/>
-                </div>
+                <Link to='/'>
+                <button className='detalle__button'>Volver a productos</button>
+                </Link>
             </div>
+        </div>
         </div>
     )
 }
