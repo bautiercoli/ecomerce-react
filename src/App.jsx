@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './containers/ItemDetailContainer/itemDetailContainer';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
-import CartContextProvider from './context/cartContext';
+import CartContextProvider from './context/CartContext';
 
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path='/' element={<ItemListContainer productos='Productos' especiales='Rolls Especiales' comb='Combos'/>} />
-        <Route path='/categoria/:categoriaId' element={<ItemListContainer productos='Productos' especiales='Rolls Especiales' comb='Combos'/>} />
+      <Route path='/' element={<ItemListContainer destacados='Productos destacados' productos='Otros productos' oferta='En oferta' />} />
+        <Route path='/categoria/:categoriaId' element={<ItemListContainer destacados='Productos destacados' productos='Otros productos' oferta='En oferta'/>} />
         <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
         <Route path='/*' element={<Navigate to='/' replace />} />
         <Route path='/cart' element={<Cart />} />

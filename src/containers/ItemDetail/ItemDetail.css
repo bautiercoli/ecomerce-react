@@ -17,3 +17,20 @@
     display: grid;
     grid-template-rows: 50% 50%;
 }
+.detalle__button {
+    background-color: #3369B0;
+    border-color: black;
+    border-radius: 5px;
+    height: 35px;
+    width: 110px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.detalle__button2 {
+    background-color: #3369B0;
+    border-color: black;
+    border-radius: 5px;
+    height: 35px;
+    width: 110px;
+}

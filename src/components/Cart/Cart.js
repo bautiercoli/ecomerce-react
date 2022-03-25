@@ -1,4 +1,5 @@
-import { useCartContext } from "../../context/cartContext"
+import { useCartContext } from "../../context/CartContext"
+import './Cart.css'
 
 function Cart() {
     const { cartList, clear } = useCartContext()
@@ -10,11 +11,13 @@ function Cart() {
                     <img src={prod.pictureURL} alt="" />
                 </div>
             <div>
-
+                <p><li>{prod.title}</li></p>
+                <p><li>Cantidad: {prod.cantidad}</li></p>
+                <p><li>Precio: ${prod.cantidad * prod.price}</li></p>
             </div>
         </div>
             </li>) }
-        <button onClick={clear}>Vaciar carrito</button>
+        <button className="clearCart" onClick={clear}>Vaciar carrito</button>
         </div>
     )
 }

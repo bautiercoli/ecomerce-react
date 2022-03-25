@@ -17,16 +17,12 @@
 }
 
 .buttonAddToCart {
-    width: 130px;
-    height: 35px;
-    background-color: #3595FF;
-    border-color: #000000;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-width: 3px;
+    background-color: #3369B0;
+    border-color: black;
     border-radius: 5px;
+    height: 35px;
+    width: 110px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     
 }
