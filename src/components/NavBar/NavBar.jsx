@@ -3,8 +3,14 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
+import { useCartContext } from '../../context/cartContext';
 
 function NavBar() {
+    
+    const { totalProducts } = useCartContext()
+
+    const valueItemCart = totalProducts();
+
     return (
         <div className='NavBar'>
             <NavLink to='/'>
@@ -20,6 +26,18 @@ function NavBar() {
                 <NavLink to="cart">
                     <CartWidget />
                 </NavLink>
+                <div className='cartWidget'>
+        <NavLink to="cart">
+            <CartWidget />  
+        </NavLink>
+        {valueItemCart === 0 ? (
+            <></>
+            ) : (
+                <div className='cartProducts'>
+                    <div className='number'>{totalProducts()}</div>
+                </div>
+            )}
+            </div>
         </div>
     )
 }

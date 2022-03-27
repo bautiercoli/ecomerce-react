@@ -7,13 +7,44 @@ import {createContext,useState, useContext} from 'react'
 function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
 
-    const IsInCart = (id) => {
-        return cartList.some( (prod) =>prod.id === id )
-    }
-
+    
     const addItem = (prod) => {
-        setCartList( [ ...cartList, prod ] )
+
+        const index = cartList.findIndex((i) => i.id === prod.id);
+
+        if (index > -1) {
+            const oldCartList = cartList[index].cantidad;
+
+            cartList.splice(index, 1);
+
+            setCartList([
+            ...cartList,
+            { ...prod, cantidad: prod.cantidad + oldCartList },
+            ]);
+        } else {
+            setCartList( [ ...cartList, prod ] )
+        }
         } 
+
+        function deleItemCart(id) {
+            setCartList(cartList.filter((prod) => prod.id !== id));
+            }
+    
+            const totalPrice = () => {
+            const totalCarrito = cartList.reduce(
+              (prev, acty) => prev + acty.price * acty.cantidad,
+                0
+            );
+            return totalCarrito;
+            };
+    
+            const totalProducts = () => {
+            const totalCarrito = cartList.reduce(
+                (prev, acty) => prev + acty.cantidad,
+                0
+            );
+            return totalCarrito;
+            };
 
     const clear=()=>{
         setCartList([])
@@ -23,8 +54,10 @@ function CartContextProvider({children}) {
         <CartContext.Provider value={{
             cartList,
             addItem,
+            deleItemCart,
             clear,
-            IsInCart
+            totalPrice,
+            totalProducts
         }}>
             {children}
         </CartContext.Provider>

@@ -8,7 +8,7 @@ const ItemDetail = ({ prod }) => {
 
     const [count, setCount] = useState(1)
 
-    const { addItem, cartList, IsInCart } = useCartContext()
+    const { addItem, cartList } = useCartContext()
 
     const sumar = ()=> {
         setCount(count+1)

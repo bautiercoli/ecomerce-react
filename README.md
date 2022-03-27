@@ -7,3 +7,4 @@ Esta es una pagina en la que se puede ordenar y previsualizar componentes de PC,
 ![image](https://github.com/bautiercoli/ecomerce-react/blob/master/src/media/animacion.gif)
 
 ###  `npm install react-router-dom`
+###  `npm install react-icons`

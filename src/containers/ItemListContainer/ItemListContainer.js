@@ -1,7 +1,7 @@
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
-const ItemListContainer = ({destacados, productos, oferta}) => {
+function ItemListContainer({productos, comb}) {
 
     return (
         <div className="contenedor">
