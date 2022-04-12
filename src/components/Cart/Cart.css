@@ -16,23 +16,24 @@
     grid-template-columns: 50% 50%;
     grid-template-columns: 50% 40% 10%;
     align-content: center;
-    border-color: #009d7c;
+    border-color: black;
     border-radius: 5px;
     border-style: solid;
+    border-width: 3px;
 }
 .cart__img{
     height: 250px;
     width: 350px;
 }
 .cart__button{
-    background-color: #009d7c;
-    border-color: green;
+    background-color: #3369B0;
+    border-color: black;
     margin-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
-    border-width: 3px;
+    border-width: 1px;
     border-radius: 5px;
 }
 

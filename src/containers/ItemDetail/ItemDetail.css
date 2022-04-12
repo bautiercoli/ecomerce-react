@@ -27,6 +27,10 @@
     margin-bottom: 5px;
     margin-right: 10px;
 }
+
+.ItemCount{
+    margin-top: 30px;
+}
 .detalle__button2 {
     background-color: #3369B0;
     border-color: black;

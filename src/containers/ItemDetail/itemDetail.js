@@ -27,7 +27,7 @@ const ItemDetail = ({ prod }) => {
     return (
         <div className='detalle'>
             <div>
-                <img  className='detalle__img' src={prod.img} alt={prod.title}></img>
+                <img  className='detalle__img' src={prod.image} alt={prod.title}></img>
             </div>
             <div className='detalle__datos'>
                 <div>
@@ -35,13 +35,11 @@ const ItemDetail = ({ prod }) => {
                     <p>{prod.description}</p>
                     <p>${prod.price}</p>
                 </div>
-                <div>
-                {
-                    IsInCart(prod.id)?
-                    <Link to='/Cart'><button className="detalle__button">Ir al carrito</button></Link>
-                    :
+                <div className='ItemCount'>
+                
+                    
                     <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} onAdd={onAdd}/>
-                }
+                
                 <Link to='/'>
                 <button className='detalle__button2'>Volver a productos</button>
                 </Link>

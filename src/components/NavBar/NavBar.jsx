@@ -3,7 +3,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-import { useCartContext } from '../../context/cartContext';
+import { useCartContext } from '../../context/CartContext';
 
 function NavBar() {
     
@@ -18,14 +18,11 @@ function NavBar() {
             </NavLink>
             <div className="NavBarmenu">
                 <div>
-                    <NavLink to='categoria/Teclados'><button className='NavBar__button'>Teclados</button></NavLink>
-                    <NavLink to='categoria/Mouses'><button className='NavBar__button'>Mouses</button></NavLink>
-                    <NavLink to='categoria/Componentes'><button className='NavBar__button'>Componentes</button></NavLink>
+                    <NavLink to='category/Teclados'><button className='NavBar__button'>Teclados</button></NavLink>
+                    <NavLink to='category/Mouses'><button className='NavBar__button'>Mouses</button></NavLink>
+                    <NavLink to='category/Componentes'><button className='NavBar__button'>Componentes</button></NavLink>
                 </div>
                 </div>
-                <NavLink to="cart">
-                    <CartWidget />
-                </NavLink>
                 <div className='cartWidget'>
         <NavLink to="cart">
             <CartWidget />  

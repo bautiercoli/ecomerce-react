@@ -1,7 +1,7 @@
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
 
-function ItemListContainer({productos, comb}) {
+function ItemListContainer({productos, destacados, oferta}) {
 
     return (
         <div className="contenedor">
