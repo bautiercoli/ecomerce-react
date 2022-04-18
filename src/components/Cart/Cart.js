@@ -67,7 +67,7 @@ function Cart() {
             { cartList.map(prod => <li key={prod.id}>
                 <div className="cart">
                     <div>
-                        <img src={ prod.image } alt="" className="cart__img"/>
+                        <img src={ prod.image } alt="{ prod.title }" className="cart__img"/>
                     </div>
                     <div className="cart__datos">
                         <p>{ prod.title }</p>
