@@ -3,7 +3,7 @@ import './Logo.css';
 
 function Logo() {
     return (
-        <div><img src={require('../../imagenes/titulo.png')} alt={ prod.title }className='logo'></img></div>
+        <div><img src={require('../../imagenes/titulo.png')} alt="" className='logo'></img></div>
     )
 }
 
