@@ -8,3 +8,4 @@ Esta es una pagina en la que se puede ordenar y previsualizar componentes de PC,
 
 ###  `npm install react-router-dom`
 ###  `npm install react-icons`
+### `npm install firebase`

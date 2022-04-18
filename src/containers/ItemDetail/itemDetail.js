@@ -27,18 +27,18 @@ const ItemDetail = ({ prod }) => {
     return (
         <div className='detalle'>
             <div>
-                <img  className='detalle__img' src={prod.image} alt={prod.title}></img>
+            <img  className='detalle__img' src={ prod.image } alt={ prod.title }></img>
             </div>
             <div className='detalle__datos'>
                 <div>
-                    <p>{prod.title}</p>
-                    <p>{prod.description}</p>
-                    <p>${prod.price}</p>
+                    <p>{ prod.title }</p>
+                    <p>{ prod.description }</p>
+                    <p>${ prod.price }</p>
                 </div>
                 <div className='ItemCount'>
                 
-                    
-                    <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} onAdd={onAdd}/>
+                
+                <ItemCount count={ count } sumar={ sumar } restar={ restar } stock={ prod.stock } initial={ 1 } onAdd={ onAdd }/>
                 
                 <Link to='/'>
                 <button className='detalle__button2'>Volver a productos</button>
